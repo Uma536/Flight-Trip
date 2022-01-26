@@ -1,0 +1,15 @@
+<div class="dots">
+  <div class="dots-inline">
+    <svg stroke="red" stroke-width="2" fill="transparent" [attr.width]="tripdetails.offsetWidth"
+      [attr.heigth]="tripdetails.offsetHeight">
+      <path *ngFor="let path of pathlevels;let i=index" [attr.d]="path" [attr.stroke]="colors[i]" />
+    </svg>
+  </div>
+  <div #tripdetails class="tripdetails">
+    <ng-container *ngFor="let trip of tripdata; let i = index">
+      <div #tripstatus class="tripstatus" [style.background-color]="colors[i]" [style.color]="colors[i]"
+        [attr.data-label]="trip.text" [style.margin-top.px]="trip.level * 50">
+      </div>
+    </ng-container>
+  </div>
+</div>

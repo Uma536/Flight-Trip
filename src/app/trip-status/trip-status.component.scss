@@ -1,0 +1,40 @@
+  
+  .tripdetails{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: nowrap;
+  }
+  .tripdetails::after{
+    content:' '
+  }
+  .tripstatus
+  {
+    width:80px;
+    text-align: center;
+  }
+  .dots{
+    position:relative
+  }
+  .dots-inline{
+    position: absolute;
+     top: 8px; 
+     left: 30px;  
+  }
+  .dots .tripdetails{
+    margin-left:30px;
+  }
+  .dots .tripstatus {
+    width: 1em;
+    height: 1em;
+    border-radius: .5em;
+    background-color: red;
+  }
+  .dots .tripstatus::after {
+    content: attr(data-label);
+    display: block;
+    width: 8em;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: -3.5em;
+  }
+  
